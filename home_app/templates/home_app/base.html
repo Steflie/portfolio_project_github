@@ -20,13 +20,23 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark border border-5 border-success rounded-3">
                 <div class="container-fluid">
-                    <div class="collapse navbar-collapse">
-                        <a class="navbar-brand" href="#">/stefanos_taramas</a>
-                    </div>
-                    <div class="navbar-nav ml-auto">
-                        <a class="navbar-brand" href="#">./About</a>
-                        <a class="navbar-brand" href="#">../Resume</a>
-                        <a class="navbar-brand" href="#">~/Contact</a>
+                    <a class="navbar-brand" href="#">
+                        <img src="{% static 'home_app/house.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+                        /stephanos_taramas
+                    </a>
+                    <div class="navbar-nav ml-auto"></div>
+                        <a class="navbar-brand mr-auto" href="#">
+                            <img src="{% static 'home_app/info(1).png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+                            ./About  
+                        </a>
+                        <a class="navbar-brand ml-auto" href="#">
+                            <img src="{% static 'home_app/resume.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+                            ../Resume
+                        </a>
+                        <a class="navbar-brand ml-auto" href="#">
+                            <img src="{% static 'home_app/phone.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+                            ~/Contact
+                        </a>
                     </div>
                 </div>
             </nav>
