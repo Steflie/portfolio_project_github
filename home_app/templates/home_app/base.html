@@ -13,7 +13,7 @@
 
         <title>Hello, world!</title>
     </head>
-    <body>
+    <body class="p-3 mb-2 bg-dark text-white">
 
         <br>
 
@@ -38,11 +38,15 @@
         
 
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid"></div>
-                    <a class="navbar-brand">Sticky top</a>
-                </div>
-            </nav>
+            <footer class="text-muted">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark border border-5 border-success rounded-3">
+                    <div class="container-fluid">
+                        <div class="navbar-brand mx-auto">
+                            <p class="navbar-brand">© Created by Stephanos Taramas {% now "Y" %}</p>
+                        </div>
+                    </div>
+                </nav>
+            </footer>
         </div>
         
         <!-- Option 1: Bootstrap Bundle with Popper -->
