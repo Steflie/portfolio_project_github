@@ -1,3 +1,37 @@
-<h1>adfafasf
-    
-</h1>
+{% extends 'home_app/base.html' %}
+
+{% block content %}
+
+<br>
+
+<div class="container">
+    <div class="row">
+            
+        {% for contact in contacts.all %}
+
+            <div class="col-sm-4">
+
+                <div class="card text-white bg-success mb-3">
+                    <div class="card-body">
+                    <h5 class="card-title">
+                        <img src="{{ contact.contact_icon.url }}" class="img-fluid" height="20" width="20"/>
+                        {{ contact.contact_name }}
+                    </h5>
+                    <p class="card-text">{{ contact.contact_info }}</p>
+                    </div>
+                </div>
+
+                <!-- if last column in row -->
+                {% if forloop.counter|divisibleby:"3" and not forloop.last %}
+                </div><div class="row">
+                {% endif %}
+
+            </div>
+        {% endfor%}
+
+    </div>
+</div>
+
+<br>
+
+{% endblock %}

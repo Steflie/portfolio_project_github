@@ -5,5 +5,7 @@ from django.db import models
 
 class ContactDetails(models.Model):
     """The details of the contact"""
-    # TODO, contact kind, contact info, ...
-    pass
+    contact_icon = models.ImageField(upload_to='images/')
+    contact_name = models.CharField(max_length=50)
+    contact_info = models.CharField(max_length=50)
+    
