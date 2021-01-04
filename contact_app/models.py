@@ -8,5 +8,4 @@ class ContactDetails(models.Model):
     contact_icon = models.ImageField(upload_to='images/')
     contact_name = models.CharField(max_length=50)
     contact_info = models.CharField(max_length=50)
-    contact_url = models.URLField(max_length=200, default='#')
-    
+    contact_url = models.URLField(max_length=200, default='#', blank=True)

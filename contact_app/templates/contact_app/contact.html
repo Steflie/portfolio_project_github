@@ -29,11 +29,20 @@
                 {% endif %}
 
             </div>
+
         {% endfor%}
 
-    </div>
+        </div>
 </div>
 
 <br>
+
+<div class="container">
+    <a href="{% url 'contact_app:contact_pdf' %}">
+        <button type="button" class="btn btn-outline-danger">PDF Contact Info</button>
+    </a>
+</div>
+
+<br>    
 
 {% endblock %}

@@ -6,7 +6,7 @@
 ./media/
 ./home_app/static/
 ./contact_app/static/
-
+./db.sqlite3
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
