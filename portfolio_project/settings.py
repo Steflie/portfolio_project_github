@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'contact_app.apps.ContactAppConfig',
     'home_app.apps.HomeAppConfig',
+    'resume_app.apps.ResumeAppConfig'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -129,6 +130,7 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "home_app/static"),
     os.path.join(BASE_DIR, "contact_app/static"),
+    os.path.join(BASE_DIR, "resume_app/static"),
 ]
 
 
