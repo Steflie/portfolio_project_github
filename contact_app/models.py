@@ -9,3 +9,6 @@ class ContactDetails(models.Model):
     contact_name = models.CharField(max_length=50)
     contact_info = models.CharField(max_length=50)
     contact_url = models.URLField(max_length=200, default='#', blank=True)
+
+    def __str__(self):
+        return self.contact_name
