@@ -1,6 +1,6 @@
 .gitignore
 # Project files and directories
-./local_settings.py
+./portfolio_project/local_settings.py
 ./static/
 ./tmp/
 ./media/

@@ -8,3 +8,4 @@ admin.site.register(Jobs)
 admin.site.register(Volunteer)
 admin.site.register(Publications)
 admin.site.register(Languages)
+
