@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('home_app.urls')),
     path('contact/', include('contact_app.urls')),
     path('resume/',include('resume_app.urls')),
+    path('about/',include('about_app.urls')),
 ]
 
 if settings.DEBUG is True:

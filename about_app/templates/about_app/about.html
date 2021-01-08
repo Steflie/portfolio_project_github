@@ -1,0 +1,30 @@
+{% extends 'home_app/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<br>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="card bg-transparent border-success">
+            <div class="card-header">
+                
+                <h3>./About/about_me.txt</h3>
+                
+            </div>
+            <div class="card-body">
+                <pre class="card-text">{{ text.about_text }}</pre>
+            </div>
+        </div>
+        
+
+    </div>
+
+</div>
+
+<br>
+
+{% endblock %}
