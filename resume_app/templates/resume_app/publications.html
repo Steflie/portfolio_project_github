@@ -1,0 +1,50 @@
+<!-- Publications Section -->
+
+<br>
+
+<div class="row bg-success rounded-3">
+
+    <div class="col-sm-3">
+
+        <br>
+
+        <div class="card text-info bg-transparent border-info mb-3"> 
+            <div class="card-body">
+
+                <h2 class="card-title mb-2">Publications</h2>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+        
+    {% for publication in publications.all %}
+
+        <div class="col-sm-9">
+
+            <br>
+
+            <div class="card text-dark bg-transparent border-dark mb-3"> 
+                
+                <div class="card-body">
+                    <h4 class="card-title mb-2">{{ publication.publication_title }}</h4>
+                    <h5 class="card-subtitle mb-2">{{ publication.publication_year }}</h5>
+                    <pre class="card-text">{{ publication.description }}</pre>
+                    <a href="{{ publication.url }}" target="_blank" style="color: #faf5f3; text-decoration: none;">
+                        <h6 class="card-subtitle mb-2">{{ publication.url }}</h6>
+                    </a>
+                </div>
+            </div>
+
+            <!-- if last column in row -->
+            {% if forloop.counter|divisibleby:"3" and not forloop.last %}
+            </div><div class="row">
+            {% endif %}
+
+        </div>
+
+    {% endfor%}
+
+</div>

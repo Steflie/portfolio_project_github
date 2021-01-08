@@ -5,168 +5,30 @@
 
 <div class="container">
 
-    <!-- Jobs Section -->
+    {% block experience %}
+        {% include "resume_app/experience.html" %}
+    {% endblock %}
 
-    <br>
+    {% block education %}
+        {% include "resume_app/education.html" %}
+    {% endblock %}
 
-    <div class="row bg-success rounded-3">
+    {% block publications %}
+        {% include "resume_app/publications.html" %}
+    {% endblock %}
 
-        <div class="col-sm-3">
+    {% block languages %}
+        {% include "resume_app/languages.html" %}
+    {% endblock %}
 
-            <br>
-
-            <div class="card text-danger bg-transparent border-danger mb-3"> 
-                <div class="card-body">
-
-                    <h2 class="card-title mb-2">Experience</h2>
-                    
-                </div>
-            </div>
-
-        </div>
-
-        <br>
-            
-        {% for job in jobs.all %}
-
-            <div class="col-sm-9">
-
-                <br>
-
-                <div class="card text-dark bg-transparent border-dark mb-3"> 
-                    <div class="card-header bg-transparent border-dark">
-                        <h4>{{ job.job_title }}</h4>
-                    </div>
-                    <div class="card-body">
-
-                        <h5 class="card-title mb-2">{{ job.company_name }} • {{ job.job_type }}</h5>
-                        <h6 class="card-subtitle mb-2">{{ job.start_date }} - {{ job.finish_date }}</h6>
-                        <h6 class="card-subtitle mb-2">{{ job.country }},{{ job.city }}</h6>                        
-                        <pre class="card-text">{{ job.description }}</pre>
-                        
-                    </div>
-                    <div class="card-footer bg-transparent border-dark">{{ job.country }},{{ job.city }}</div>
-                </div>
-
-                <!-- if last column in row -->
-                {% if forloop.counter|divisibleby:"3" and not forloop.last %}
-                </div><div class="row">
-                {% endif %}
-
-            </div>
-
-        {% endfor%}
-
-        </div>
-
-
-
-    <!-- Education Section -->
-
-    <br>
-
-    <div class="row bg-success rounded-3">
-
-        <div class="col-sm-3">
-
-            <br>
-
-            <div class="card text-warning bg-transparent border-warning mb-3"> 
-                <div class="card-body">
-
-                    <h2 class="card-title mb-2">Education</h2>
-                    
-                </div>
-            </div>
-
-        </div>
-
-        <br>
-            
-        {% for education in educations.all %}
-
-            <div class="col-sm-9">
-
-                <br>
-
-                <div class="card text-dark bg-transparent border-dark mb-3"> 
-                    
-                    <div class="card-body">
-
-                        <h4 class="card-title mb-2">{{ education.institution }}</h4>
-                        <h5 class="card-subtitle mb-2">{{ education.level }}</h5>
-                        <h6 class="card-subtitle mb-2">{{ education.grade }}</h6>
-                        <h6 class="card-subtitle mb-2">{{ education.start_date }} - {{ education.finish_date }}</h6>
-                        
-                    </div>
-                </div>
-
-                <!-- if last column in row -->
-                {% if forloop.counter|divisibleby:"3" and not forloop.last %}
-                </div><div class="row">
-                {% endif %}
-
-            </div>
-
-        {% endfor%}
-
-    </div>
-
-
-    <!-- Publications Section -->
-
-    <br>
-
-    <div class="row bg-success rounded-3">
-
-        <div class="col-sm-3">
-
-            <br>
-
-            <div class="card text-info bg-transparent border-info mb-3"> 
-                <div class="card-body">
-
-                    <h2 class="card-title mb-2">Publications</h2>
-                    
-                </div>
-            </div>
-
-        </div>
-
-        <br>
-            
-        {% for publication in publications.all %}
-
-            <div class="col-sm-9">
-
-                <br>
-
-                <div class="card text-dark bg-transparent border-dark mb-3"> 
-                    
-                    <div class="card-body">
-                        <h4 class="card-title mb-2">{{ publication.publication_title }}</h4>
-                        <h5 class="card-subtitle mb-2">{{ publication.publication_year }}</h5>
-                        <pre class="card-text">{{ publication.description }}</pre>
-                        <a href="{{ publication.url }}" style="color: #faf5f3; text-decoration: none;">
-                            <h6 class="card-subtitle mb-2">{{ publication.url }}</h6>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- if last column in row -->
-                {% if forloop.counter|divisibleby:"3" and not forloop.last %}
-                </div><div class="row">
-                {% endif %}
-
-            </div>
-
-        {% endfor%}
-
-    </div>
+    {% block volunteer %}
+        {% include "resume_app/volunteer.html" %}
+    {% endblock %}
 
 </div>
 
 <br>
+
 
 
 

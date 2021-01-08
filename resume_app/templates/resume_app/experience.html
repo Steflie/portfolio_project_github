@@ -1,0 +1,52 @@
+<!-- Jobs Section -->
+
+<br>
+
+<div class="row bg-success rounded-3">
+
+    <div class="col-sm-3">
+
+        <br>
+
+        <div class="card text-danger bg-transparent border-danger mb-3"> 
+            <div class="card-body">
+
+                <h2 class="card-title mb-2">Experience</h2>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+        
+    {% for job in jobs.all %}
+
+        <div class="col-sm-9">
+
+            <br>
+
+            <div class="card text-dark bg-transparent border-dark mb-3"> 
+                <div class="card-header bg-transparent border-dark">
+                    <h4>{{ job.job_title }}</h4>
+                </div>
+                <div class="card-body">
+
+                    <h5 class="card-title mb-2">{{ job.company_name }} • {{ job.job_type }}</h5>
+                    <h6 class="card-subtitle mb-2">{{ job.start_date }} - {{ job.finish_date }}</h6>                      
+                    <pre class="card-text">{{ job.description }}</pre>
+                    
+                </div>
+                <div class="card-footer bg-transparent border-dark">{{ job.country }},{{ job.city }}</div>
+            </div>
+
+            <!-- if last column in row -->
+            {% if forloop.counter|divisibleby:"3" and not forloop.last %}
+            </div><div class="row">
+            {% endif %}
+
+        </div>
+
+    {% endfor%}
+
+</div>
