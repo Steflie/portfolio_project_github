@@ -21,13 +21,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ""
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['178.62.193.178','localhost']
 
 # Application definition
 
@@ -80,8 +78,12 @@ WSGI_APPLICATION = 'portfolio_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'portfolio',
+        'USER': 'staramas',
+        'PASSWORD': '212221',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -130,17 +132,12 @@ MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "home_app/static"),
-    os.path.join(BASE_DIR, "contact_app/static"),
-    os.path.join(BASE_DIR, "resume_app/static"),
 ]
 
 
 
-if DEBUG:
+if not DEBUG:
     try:
         from .local_settings import *
     except ImportError:
-        pass
-
-
-    
+        pass    

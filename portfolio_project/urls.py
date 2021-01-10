@@ -26,8 +26,5 @@ urlpatterns = [
     path('contact/', include('contact_app.urls')),
     path('resume/',include('resume_app.urls')),
     path('about/',include('about_app.urls')),
-]
-
-if settings.DEBUG is True:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
